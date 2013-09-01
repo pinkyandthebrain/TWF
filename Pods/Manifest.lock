@@ -1,0 +1,17 @@
+PODS:
+  - AFNetworking (1.3.2)
+  - AFOAuth1Client (0.3.0):
+    - AFNetworking (~> 1.3)
+  - Facebook-iOS-SDK (3.7.1)
+
+DEPENDENCIES:
+  - AFNetworking (~> 1.3.1)
+  - AFOAuth1Client
+  - Facebook-iOS-SDK
+
+SPEC CHECKSUMS:
+  AFNetworking: 7f9bcd7c287a75476cd5c61e82fd3380e93e4c54
+  AFOAuth1Client: 17d198878103be5afa513752d1ed5694328adc4b
+  Facebook-iOS-SDK: bf38d403928f6adb652e2e5ae46253e0c6ba9a19
+
+COCOAPODS: 0.23.0
