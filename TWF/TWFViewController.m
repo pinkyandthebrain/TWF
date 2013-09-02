@@ -1,16 +1,22 @@
 //
-//  TWFViewController.m
+//  TWF1ViewController.m
 //  TWF
 //
-//  Created by Seema Kamath on 9/1/13.
+//  Created by Seema Kamath on 9/2/13.
 //  Copyright (c) 2013 Y.CORP.YAHOO.COM\seemakam. All rights reserved.
 //
 
-#import "TWFViewController.h"
+
 #import <FacebookSDK/FacebookSDK.h>
+#import "TWFViewController.h"
+#import "TWFImagePickerController.h"
+#import "TWFStreamViewController.h"
+
 
 @interface TWFViewController ()
 
+
+@property(nonatomic, copy) NSArray *tabViewControllers;
 -(void) logoutButtonPressed:(id)sender;
 
 @end
@@ -21,7 +27,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+       
     }
     return self;
 }
@@ -29,8 +35,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    self.navigationItem.rightBarButtonItem =[[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStyleBordered target:self action:@selector(logoutButtonPressed:)];
+    // Do any additional setup after loading the view from its nib.
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStyleBordered target:self action:@selector(logoutButtonPressed:)];
+    
+    //Allocate the view controllers here
+    TWFStreamViewController *twfStreamViewController = [[TWFStreamViewController alloc] init];
+    TWFImagePickerController *twfImagePickerController = [[TWFImagePickerController alloc] init];
+    
+    self.tabViewControllers = [[NSArray alloc] initWithObjects:twfStreamViewController,twfImagePickerController, nil];
+    [self setViewControllers:self.tabViewControllers animated:YES];
+    
+
+    
+    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,4 +61,5 @@
 -(void) logoutButtonPressed:(id)sender{
     [FBSession.activeSession closeAndClearTokenInformation];
 }
+
 @end

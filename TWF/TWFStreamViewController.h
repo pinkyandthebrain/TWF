@@ -1,5 +1,5 @@
 //
-//  TWF1ViewController.h
+//  TWFStreamViewController.h
 //  TWF
 //
 //  Created by Seema Kamath on 9/2/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TWFViewController : UITabBarController
+@interface TWFStreamViewController : UIViewController
 
 @end

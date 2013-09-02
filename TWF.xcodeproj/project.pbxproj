@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3DA844B33AA34C20902AB223 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BDB9F17201740E196B81ADA /* libPods.a */; };
+		0DA5699F91714BC7817D4AC2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 588DED296DED4819B5F38B80 /* libPods.a */; };
+		F044B20117D522C6009AC533 /* TWFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F044B1FF17D522C6009AC533 /* TWFViewController.m */; };
+		F044B20217D522C6009AC533 /* TWFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F044B20017D522C6009AC533 /* TWFViewController.xib */; };
+		F044B20917D52675009AC533 /* TWFImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F044B20717D52675009AC533 /* TWFImagePickerController.m */; };
+		F044B20A17D52675009AC533 /* TWFImagePickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F044B20817D52675009AC533 /* TWFImagePickerController.xib */; };
+		F044B20B17D5267F009AC533 /* TWFStreamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F044B20517D525AE009AC533 /* TWFStreamViewController.xib */; };
+		F044B20C17D52685009AC533 /* TWFStreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F044B20417D525AE009AC533 /* TWFStreamViewController.m */; };
+		F0AFA90E17D533E10042DD8D /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AFA90C17D533E10042DD8D /* camera.png */; };
+		F0AFA90F17D533E10042DD8D /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AFA90D17D533E10042DD8D /* food.png */; };
 		F0B8647817D3B63D004F0DE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B8647717D3B63D004F0DE1 /* Foundation.framework */; };
 		F0B8647A17D3B63D004F0DE1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B8647917D3B63D004F0DE1 /* CoreGraphics.framework */; };
 		F0B8647C17D3B63D004F0DE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B8647B17D3B63D004F0DE1 /* UIKit.framework */; };
@@ -22,7 +30,6 @@
 		F0B8649D17D3B63D004F0DE1 /* TWFTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B8649C17D3B63D004F0DE1 /* TWFTests.m */; };
 		F0B864A917D3CC0E004F0DE1 /* TWFLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B864A717D3CC0E004F0DE1 /* TWFLoginViewController.m */; };
 		F0B864AA17D3CC0E004F0DE1 /* TWFLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0B864A817D3CC0E004F0DE1 /* TWFLoginViewController.xib */; };
-		F0B864AD17D3CFD8004F0DE1 /* TWFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B864AC17D3CFD8004F0DE1 /* TWFViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +43,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7BDB9F17201740E196B81ADA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA28894441E84C70A24F79CC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		588DED296DED4819B5F38B80 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		85C70166C6144AB1A5A56280 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		F044B1FE17D522C6009AC533 /* TWFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWFViewController.h; sourceTree = "<group>"; };
+		F044B1FF17D522C6009AC533 /* TWFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWFViewController.m; sourceTree = "<group>"; };
+		F044B20017D522C6009AC533 /* TWFViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWFViewController.xib; sourceTree = "<group>"; };
+		F044B20317D525AE009AC533 /* TWFStreamViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWFStreamViewController.h; sourceTree = "<group>"; };
+		F044B20417D525AE009AC533 /* TWFStreamViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWFStreamViewController.m; sourceTree = "<group>"; };
+		F044B20517D525AE009AC533 /* TWFStreamViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TWFStreamViewController.xib; sourceTree = "<group>"; };
+		F044B20617D52675009AC533 /* TWFImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWFImagePickerController.h; sourceTree = "<group>"; };
+		F044B20717D52675009AC533 /* TWFImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWFImagePickerController.m; sourceTree = "<group>"; };
+		F044B20817D52675009AC533 /* TWFImagePickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWFImagePickerController.xib; sourceTree = "<group>"; };
+		F0AFA90C17D533E10042DD8D /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = Images/camera.png; sourceTree = SOURCE_ROOT; };
+		F0AFA90D17D533E10042DD8D /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = food.png; path = Images/food.png; sourceTree = SOURCE_ROOT; };
 		F0B8647417D3B63D004F0DE1 /* TWF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B8647717D3B63D004F0DE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F0B8647917D3B63D004F0DE1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -57,8 +75,6 @@
 		F0B864A617D3CC0E004F0DE1 /* TWFLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWFLoginViewController.h; sourceTree = "<group>"; };
 		F0B864A717D3CC0E004F0DE1 /* TWFLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWFLoginViewController.m; sourceTree = "<group>"; };
 		F0B864A817D3CC0E004F0DE1 /* TWFLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWFLoginViewController.xib; sourceTree = "<group>"; };
-		F0B864AB17D3CFD8004F0DE1 /* TWFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWFViewController.h; sourceTree = "<group>"; };
-		F0B864AC17D3CFD8004F0DE1 /* TWFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWFViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +85,7 @@
 				F0B8647A17D3B63D004F0DE1 /* CoreGraphics.framework in Frameworks */,
 				F0B8647C17D3B63D004F0DE1 /* UIKit.framework in Frameworks */,
 				F0B8647817D3B63D004F0DE1 /* Foundation.framework in Frameworks */,
-				3DA844B33AA34C20902AB223 /* libPods.a in Frameworks */,
+				0DA5699F91714BC7817D4AC2 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +102,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F044B20D17D52B0B009AC533 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F0AFA90C17D533E10042DD8D /* camera.png */,
+				F0AFA90D17D533E10042DD8D /* food.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		F0B8646B17D3B63D004F0DE1 = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +118,7 @@
 				F0B8649617D3B63D004F0DE1 /* TWFTests */,
 				F0B8647617D3B63D004F0DE1 /* Frameworks */,
 				F0B8647517D3B63D004F0DE1 /* Products */,
-				AA28894441E84C70A24F79CC /* Pods.xcconfig */,
+				85C70166C6144AB1A5A56280 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,7 +138,7 @@
 				F0B8647917D3B63D004F0DE1 /* CoreGraphics.framework */,
 				F0B8647B17D3B63D004F0DE1 /* UIKit.framework */,
 				F0B8649017D3B63D004F0DE1 /* XCTest.framework */,
-				7BDB9F17201740E196B81ADA /* libPods.a */,
+				588DED296DED4819B5F38B80 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,15 +146,23 @@
 		F0B8647D17D3B63D004F0DE1 /* TWF */ = {
 			isa = PBXGroup;
 			children = (
+				F044B20D17D52B0B009AC533 /* Images */,
 				F0B8648617D3B63D004F0DE1 /* AppDelegate.h */,
 				F0B8648717D3B63D004F0DE1 /* AppDelegate.m */,
-				F0B864AB17D3CFD8004F0DE1 /* TWFViewController.h */,
-				F0B864AC17D3CFD8004F0DE1 /* TWFViewController.m */,
 				F0B864A617D3CC0E004F0DE1 /* TWFLoginViewController.h */,
 				F0B864A717D3CC0E004F0DE1 /* TWFLoginViewController.m */,
 				F0B864A817D3CC0E004F0DE1 /* TWFLoginViewController.xib */,
 				F0B8648917D3B63D004F0DE1 /* Images.xcassets */,
 				F0B8647E17D3B63D004F0DE1 /* Supporting Files */,
+				F044B1FE17D522C6009AC533 /* TWFViewController.h */,
+				F044B1FF17D522C6009AC533 /* TWFViewController.m */,
+				F044B20017D522C6009AC533 /* TWFViewController.xib */,
+				F044B20317D525AE009AC533 /* TWFStreamViewController.h */,
+				F044B20417D525AE009AC533 /* TWFStreamViewController.m */,
+				F044B20517D525AE009AC533 /* TWFStreamViewController.xib */,
+				F044B20617D52675009AC533 /* TWFImagePickerController.h */,
+				F044B20717D52675009AC533 /* TWFImagePickerController.m */,
+				F044B20817D52675009AC533 /* TWFImagePickerController.xib */,
 			);
 			path = TWF;
 			sourceTree = "<group>";
@@ -240,6 +273,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F044B20B17D5267F009AC533 /* TWFStreamViewController.xib in Resources */,
+				F044B20A17D52675009AC533 /* TWFImagePickerController.xib in Resources */,
+				F044B20217D522C6009AC533 /* TWFViewController.xib in Resources */,
+				F0AFA90E17D533E10042DD8D /* camera.png in Resources */,
+				F0AFA90F17D533E10042DD8D /* food.png in Resources */,
 				F0B8648217D3B63D004F0DE1 /* InfoPlist.strings in Resources */,
 				F0B864AA17D3CC0E004F0DE1 /* TWFLoginViewController.xib in Resources */,
 				F0B8648A17D3B63D004F0DE1 /* Images.xcassets in Resources */,
@@ -294,10 +332,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F044B20C17D52685009AC533 /* TWFStreamViewController.m in Sources */,
 				F0B864A917D3CC0E004F0DE1 /* TWFLoginViewController.m in Sources */,
+				F044B20917D52675009AC533 /* TWFImagePickerController.m in Sources */,
 				F0B8648817D3B63D004F0DE1 /* AppDelegate.m in Sources */,
-				F0B864AD17D3CFD8004F0DE1 /* TWFViewController.m in Sources */,
 				F0B8648417D3B63D004F0DE1 /* main.m in Sources */,
+				F044B20117D522C6009AC533 /* TWFViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,7 +449,7 @@
 		};
 		F0B864A117D3B63D004F0DE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA28894441E84C70A24F79CC /* Pods.xcconfig */;
+			baseConfigurationReference = 85C70166C6144AB1A5A56280 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -423,7 +463,7 @@
 		};
 		F0B864A217D3B63D004F0DE1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA28894441E84C70A24F79CC /* Pods.xcconfig */;
+			baseConfigurationReference = 85C70166C6144AB1A5A56280 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

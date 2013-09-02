@@ -11,8 +11,8 @@
 
 @interface TWFLoginViewController ()
 
-
 - (IBAction)performLogin:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
 @end
@@ -32,6 +32,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
 }
 
 - (void)didReceiveMemoryWarning
