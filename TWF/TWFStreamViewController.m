@@ -22,7 +22,7 @@
         UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:nil image:anImage tag:0];
         
         [self setTabBarItem:theItem];  
-
+        self.title = @"Near You";
     }
     return self;
 }

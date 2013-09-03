@@ -16,6 +16,9 @@
 		F044B20C17D52685009AC533 /* TWFStreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F044B20417D525AE009AC533 /* TWFStreamViewController.m */; };
 		F0AFA90E17D533E10042DD8D /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AFA90C17D533E10042DD8D /* camera.png */; };
 		F0AFA90F17D533E10042DD8D /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AFA90D17D533E10042DD8D /* food.png */; };
+		F0AFA91317D55B010042DD8D /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AFA91117D55B010042DD8D /* PostViewController.m */; };
+		F0AFA91417D55B010042DD8D /* PostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0AFA91217D55B010042DD8D /* PostViewController.xib */; };
+		F0AFA91617D562E50042DD8D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0AFA91517D562E50042DD8D /* MobileCoreServices.framework */; };
 		F0B8647817D3B63D004F0DE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B8647717D3B63D004F0DE1 /* Foundation.framework */; };
 		F0B8647A17D3B63D004F0DE1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B8647917D3B63D004F0DE1 /* CoreGraphics.framework */; };
 		F0B8647C17D3B63D004F0DE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B8647B17D3B63D004F0DE1 /* UIKit.framework */; };
@@ -56,6 +59,10 @@
 		F044B20817D52675009AC533 /* TWFImagePickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWFImagePickerController.xib; sourceTree = "<group>"; };
 		F0AFA90C17D533E10042DD8D /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = Images/camera.png; sourceTree = SOURCE_ROOT; };
 		F0AFA90D17D533E10042DD8D /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = food.png; path = Images/food.png; sourceTree = SOURCE_ROOT; };
+		F0AFA91017D55B010042DD8D /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
+		F0AFA91117D55B010042DD8D /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostViewController.m; sourceTree = "<group>"; };
+		F0AFA91217D55B010042DD8D /* PostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostViewController.xib; sourceTree = "<group>"; };
+		F0AFA91517D562E50042DD8D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		F0B8647417D3B63D004F0DE1 /* TWF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B8647717D3B63D004F0DE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F0B8647917D3B63D004F0DE1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0AFA91617D562E50042DD8D /* MobileCoreServices.framework in Frameworks */,
 				F0B8647A17D3B63D004F0DE1 /* CoreGraphics.framework in Frameworks */,
 				F0B8647C17D3B63D004F0DE1 /* UIKit.framework in Frameworks */,
 				F0B8647817D3B63D004F0DE1 /* Foundation.framework in Frameworks */,
@@ -134,6 +142,7 @@
 		F0B8647617D3B63D004F0DE1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F0AFA91517D562E50042DD8D /* MobileCoreServices.framework */,
 				F0B8647717D3B63D004F0DE1 /* Foundation.framework */,
 				F0B8647917D3B63D004F0DE1 /* CoreGraphics.framework */,
 				F0B8647B17D3B63D004F0DE1 /* UIKit.framework */,
@@ -163,6 +172,9 @@
 				F044B20617D52675009AC533 /* TWFImagePickerController.h */,
 				F044B20717D52675009AC533 /* TWFImagePickerController.m */,
 				F044B20817D52675009AC533 /* TWFImagePickerController.xib */,
+				F0AFA91017D55B010042DD8D /* PostViewController.h */,
+				F0AFA91117D55B010042DD8D /* PostViewController.m */,
+				F0AFA91217D55B010042DD8D /* PostViewController.xib */,
 			);
 			path = TWF;
 			sourceTree = "<group>";
@@ -275,6 +287,7 @@
 			files = (
 				F044B20B17D5267F009AC533 /* TWFStreamViewController.xib in Resources */,
 				F044B20A17D52675009AC533 /* TWFImagePickerController.xib in Resources */,
+				F0AFA91417D55B010042DD8D /* PostViewController.xib in Resources */,
 				F044B20217D522C6009AC533 /* TWFViewController.xib in Resources */,
 				F0AFA90E17D533E10042DD8D /* camera.png in Resources */,
 				F0AFA90F17D533E10042DD8D /* food.png in Resources */,
@@ -332,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0AFA91317D55B010042DD8D /* PostViewController.m in Sources */,
 				F044B20C17D52685009AC533 /* TWFStreamViewController.m in Sources */,
 				F0B864A917D3CC0E004F0DE1 /* TWFLoginViewController.m in Sources */,
 				F044B20917D52675009AC533 /* TWFImagePickerController.m in Sources */,

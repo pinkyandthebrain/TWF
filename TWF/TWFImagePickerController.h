@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TWFImagePickerController : UIImagePickerController
+@interface TWFImagePickerController : UIImagePickerController <UIImagePickerControllerDelegate>
 
 @end
