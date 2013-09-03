@@ -8,9 +8,11 @@
 
 
 #import <FacebookSDK/FacebookSDK.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+
 #import "TWFViewController.h"
 #import "TWFImagePickerController.h"
-#import "TWFStreamViewController.h"
+#import "PostViewController.h"
 
 
 @interface TWFViewController ()
@@ -18,7 +20,7 @@
 
 @property(nonatomic, copy) NSArray *tabViewControllers;
 -(void) logoutButtonPressed:(id)sender;
-
+-(void) composeButtonPressed;
 @end
 
 @implementation TWFViewController
@@ -36,18 +38,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStyleBordered target:self action:@selector(logoutButtonPressed:)];
-    
-    //Allocate the view controllers here
-    TWFStreamViewController *twfStreamViewController = [[TWFStreamViewController alloc] init];
-    TWFImagePickerController *twfImagePickerController = [[TWFImagePickerController alloc] init];
-    
-    self.tabViewControllers = [[NSArray alloc] initWithObjects:twfStreamViewController,twfImagePickerController, nil];
-    [self setViewControllers:self.tabViewControllers animated:YES];
-    
-
-    
-    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logoutButtonPressed:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"camera.png"] landscapeImagePhone:[UIImage imageNamed:@"camera.png"] style:UIBarButtonItemStylePlain target:self action:@selector(composeButtonPressed)];
 
 }
 
@@ -60,6 +52,13 @@
 #pragma mark - Private methods
 -(void) logoutButtonPressed:(id)sender{
     [FBSession.activeSession closeAndClearTokenInformation];
+}
+
+-(void) composeButtonPressed{
+    //Push the compose view controller here.
+    PostViewController *postVC = [[PostViewController alloc] init];
+    [self.navigationController pushViewController:postVC animated:NO];
+    
 }
 
 @end

@@ -10,8 +10,14 @@
 #import "TWFImagePickerController.h"
 #import "PostViewController.h"
 
+@interface TWFImagePickerController ()
+
+@property (nonatomic, strong)  UIImage *imageToUse;
+
+@end
 
 @implementation TWFImagePickerController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -22,7 +28,7 @@
         UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:nil image:anImage tag:0];
         
         [self setTabBarItem:theItem];
-        self.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
+
     }
     return self;
 }
@@ -31,12 +37,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    if([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerSourceTypeCamera]){
-        [self setSourceType:UIImagePickerControllerSourceTypeCamera];
-    }else{
-        [self setSourceType:UIImagePickerControllerSourceTypePhotoLibrary ];
-    }
-    self.allowsEditing = NO;
     
 }
 
@@ -46,33 +46,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - UIImagePicker Delegate
-
-
-- (void) imagePickerController: (UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *) info
-{
-
-    
-    NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
-    UIImage *imageToUse;
-    
-    // Handle a still image picked from a photo album
-    if (CFStringCompare ((CFStringRef) mediaType, kUTTypeImage, 0)
-        == kCFCompareEqualTo) {
-        
-        imageToUse = (UIImage *) [info objectForKey:UIImagePickerControllerOriginalImage];
-        
-        PostViewController *postVC = [[PostViewController alloc] init];
-        [postVC.imageForPost initWithImage:imageToUse];
-        postVC.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-        [self presentViewController:postVC animated:YES completion:nil];
-        // Do something with imageToUse
-        NSLog(@"YAAAY");
-        
-    }
-    
-    [[picker parentViewController] dismissViewControllerAnimated:YES completion:nil];
-    
+- (void) viewDidAppear:(BOOL)animated{
+    NSLog(@"test");
+    PostViewController *postVC = [[PostViewController alloc] initWithImage:self.imageToUse];
+    postVC.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    [self presentViewController:postVC animated:YES completion:nil];
 }
 
 @end

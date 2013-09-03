@@ -5,6 +5,7 @@
 //  Created by Seema Kamath on 9/2/13.
 //  Copyright (c) 2013 Y.CORP.YAHOO.COM\seemakam. All rights reserved.
 //
+#import <MobileCoreServices/MobileCoreServices.h>
 
 #import "PostViewController.h"
 
@@ -12,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *yuckButton;
 @property (weak, nonatomic) IBOutlet UIButton *yumButton;
+@property (nonatomic, strong) UIImage *imageToUse;
 
 - (IBAction)postButtonPressed:(id)sender;
 - (IBAction)yumButtonPressed:(id)sender;
@@ -31,10 +33,37 @@
     return self;
 }
 
+- (id) initWithImage:(UIImage *)imageToUse
+{
+    
+    if (self) {
+        // Custom initialization
+        self.imageForPost = [[UIImageView alloc] initWithImage:imageToUse];
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    
+    
+    if([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerSourceTypeCamera]){
+        [imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
+    }else{
+        [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary ];
+    }
+    imagePicker.allowsEditing = NO;
+    imagePicker.delegate = self;
+    
+    [self presentViewController:imagePicker animated:YES completion:nil];
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [self.imageForPost initWithImage:self.imageToUse];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,6 +73,28 @@
 }
 
 #pragma mark - UITextView Delegate
+#pragma mark - UIImagePicker Delegate
+
+
+
+- (void) imagePickerController: (UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *) info
+{
+    
+    
+    NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
+    // Handle a still image picked from a photo album
+    if (CFStringCompare ((CFStringRef) mediaType, kUTTypeImage, 0)
+        == kCFCompareEqualTo) {
+        
+        self.imageToUse = (UIImage *) [info objectForKey:UIImagePickerControllerOriginalImage];
+        
+        // Do something with imageToUse
+        NSLog(@"YAAAY");
+        
+    }
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+}
 
 
 
@@ -51,8 +102,7 @@
 - (IBAction)postButtonPressed:(id)sender {
     
     //Create a story with image, location, review and post it to Facebook
-    
-    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

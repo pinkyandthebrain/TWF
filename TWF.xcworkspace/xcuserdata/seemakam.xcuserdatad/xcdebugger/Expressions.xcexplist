@@ -10,5 +10,27 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "-[TWFImagePickerController viewDidAppear:]:TWFImagePickerController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PostViewController initWithImage:]:PostViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PostViewController viewDidAppear:]:PostViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.imageToUse">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PostViewController viewDidLoad]:PostViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.imageForPost.imageView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TWFViewController : UITabBarController
+@interface TWFViewController : UIViewController
 
 @end

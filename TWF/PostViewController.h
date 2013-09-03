@@ -10,6 +10,8 @@
 
 @interface PostViewController : UIViewController <UITextViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageForPost;
+@property (strong, nonatomic) IBOutlet UIImageView *imageForPost;
+
+- (id)initWithImage:(UIImage *)imageToUse;
 
 @end

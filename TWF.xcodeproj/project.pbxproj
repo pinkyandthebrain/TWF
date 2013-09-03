@@ -10,10 +10,6 @@
 		0DA5699F91714BC7817D4AC2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 588DED296DED4819B5F38B80 /* libPods.a */; };
 		F044B20117D522C6009AC533 /* TWFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F044B1FF17D522C6009AC533 /* TWFViewController.m */; };
 		F044B20217D522C6009AC533 /* TWFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F044B20017D522C6009AC533 /* TWFViewController.xib */; };
-		F044B20917D52675009AC533 /* TWFImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F044B20717D52675009AC533 /* TWFImagePickerController.m */; };
-		F044B20A17D52675009AC533 /* TWFImagePickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F044B20817D52675009AC533 /* TWFImagePickerController.xib */; };
-		F044B20B17D5267F009AC533 /* TWFStreamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F044B20517D525AE009AC533 /* TWFStreamViewController.xib */; };
-		F044B20C17D52685009AC533 /* TWFStreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F044B20417D525AE009AC533 /* TWFStreamViewController.m */; };
 		F0AFA90E17D533E10042DD8D /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AFA90C17D533E10042DD8D /* camera.png */; };
 		F0AFA90F17D533E10042DD8D /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = F0AFA90D17D533E10042DD8D /* food.png */; };
 		F0AFA91317D55B010042DD8D /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AFA91117D55B010042DD8D /* PostViewController.m */; };
@@ -51,12 +47,6 @@
 		F044B1FE17D522C6009AC533 /* TWFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWFViewController.h; sourceTree = "<group>"; };
 		F044B1FF17D522C6009AC533 /* TWFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWFViewController.m; sourceTree = "<group>"; };
 		F044B20017D522C6009AC533 /* TWFViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWFViewController.xib; sourceTree = "<group>"; };
-		F044B20317D525AE009AC533 /* TWFStreamViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWFStreamViewController.h; sourceTree = "<group>"; };
-		F044B20417D525AE009AC533 /* TWFStreamViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWFStreamViewController.m; sourceTree = "<group>"; };
-		F044B20517D525AE009AC533 /* TWFStreamViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TWFStreamViewController.xib; sourceTree = "<group>"; };
-		F044B20617D52675009AC533 /* TWFImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWFImagePickerController.h; sourceTree = "<group>"; };
-		F044B20717D52675009AC533 /* TWFImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWFImagePickerController.m; sourceTree = "<group>"; };
-		F044B20817D52675009AC533 /* TWFImagePickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWFImagePickerController.xib; sourceTree = "<group>"; };
 		F0AFA90C17D533E10042DD8D /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = Images/camera.png; sourceTree = SOURCE_ROOT; };
 		F0AFA90D17D533E10042DD8D /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = food.png; path = Images/food.png; sourceTree = SOURCE_ROOT; };
 		F0AFA91017D55B010042DD8D /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
@@ -166,12 +156,6 @@
 				F044B1FE17D522C6009AC533 /* TWFViewController.h */,
 				F044B1FF17D522C6009AC533 /* TWFViewController.m */,
 				F044B20017D522C6009AC533 /* TWFViewController.xib */,
-				F044B20317D525AE009AC533 /* TWFStreamViewController.h */,
-				F044B20417D525AE009AC533 /* TWFStreamViewController.m */,
-				F044B20517D525AE009AC533 /* TWFStreamViewController.xib */,
-				F044B20617D52675009AC533 /* TWFImagePickerController.h */,
-				F044B20717D52675009AC533 /* TWFImagePickerController.m */,
-				F044B20817D52675009AC533 /* TWFImagePickerController.xib */,
 				F0AFA91017D55B010042DD8D /* PostViewController.h */,
 				F0AFA91117D55B010042DD8D /* PostViewController.m */,
 				F0AFA91217D55B010042DD8D /* PostViewController.xib */,
@@ -285,8 +269,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F044B20B17D5267F009AC533 /* TWFStreamViewController.xib in Resources */,
-				F044B20A17D52675009AC533 /* TWFImagePickerController.xib in Resources */,
 				F0AFA91417D55B010042DD8D /* PostViewController.xib in Resources */,
 				F044B20217D522C6009AC533 /* TWFViewController.xib in Resources */,
 				F0AFA90E17D533E10042DD8D /* camera.png in Resources */,
@@ -346,9 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0AFA91317D55B010042DD8D /* PostViewController.m in Sources */,
-				F044B20C17D52685009AC533 /* TWFStreamViewController.m in Sources */,
 				F0B864A917D3CC0E004F0DE1 /* TWFLoginViewController.m in Sources */,
-				F044B20917D52675009AC533 /* TWFImagePickerController.m in Sources */,
 				F0B8648817D3B63D004F0DE1 /* AppDelegate.m in Sources */,
 				F0B8648417D3B63D004F0DE1 /* main.m in Sources */,
 				F044B20117D522C6009AC533 /* TWFViewController.m in Sources */,
