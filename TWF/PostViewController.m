@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Y.CORP.YAHOO.COM\seemakam. All rights reserved.
 //
 #import <MobileCoreServices/MobileCoreServices.h>
-
+#import <QuartzCore/QuartzCore.h>
 #import "PostViewController.h"
 
 @interface PostViewController ()
@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *yuckButton;
 @property (weak, nonatomic) IBOutlet UIButton *yumButton;
 @property (nonatomic, strong) UIImage *imageToUse;
+@property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 
 - (IBAction)postButtonPressed:(id)sender;
 - (IBAction)yumButtonPressed:(id)sender;
@@ -47,6 +48,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.descriptionTextView.layer.borderWidth = 2.0F;
+    self.descriptionTextView.layer.borderColor = [[UIColor grayColor] CGColor];
+    self.imageForPost.layer.borderWidth = 3.0F;
+    self.imageForPost.layer.borderColor = [[UIColor grayColor] CGColor];
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     
     
