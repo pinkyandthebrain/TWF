@@ -48,10 +48,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.descriptionTextView.layer.borderWidth = 2.0F;
+    self.descriptionTextView.layer.borderWidth = 0.5F;
     self.descriptionTextView.layer.borderColor = [[UIColor grayColor] CGColor];
-    self.imageForPost.layer.borderWidth = 3.0F;
-    self.imageForPost.layer.borderColor = [[UIColor grayColor] CGColor];
+    //self.imageForPost.layer.borderWidth = 0.5F;
+    //self.imageForPost.layer.borderColor = [[UIColor grayColor] CGColor];
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     
     
@@ -68,6 +68,7 @@
 
 - (void) viewDidAppear:(BOOL)animated
 {
+    // [self.imageForPost setBounds:CGRectMake(self.imageForPost.bounds.origin.x,self.imageForPost.bounds.origin.y, self.imageToUse.size.width, self.imageToUse.size.width)];
     [self.imageForPost initWithImage:self.imageToUse];
 }
 
