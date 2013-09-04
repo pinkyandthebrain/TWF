@@ -52,6 +52,8 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Post" style:UIBarButtonItemStylePlain target:self action:@selector(postButtonPressed)];
     
+    self.descriptionTextView.delegate = self;
+    
     self.descriptionTextView.layer.borderWidth = 0.5F;
     self.descriptionTextView.layer.borderColor = [[UIColor grayColor] CGColor];
     //self.imageForPost.layer.borderWidth = 0.5F;
@@ -87,11 +89,17 @@
 - (void) textViewDidBeginEditing:(UITextView *)textView
 {
     //Scroll to show the text box in view
-    
-  
+    CGPoint pt;
+    CGRect rc = [self.descriptionTextView bounds];
+    rc = [self.descriptionTextView convertRect:rc toView:self.postScrollView];
+    pt = rc.origin;
+    pt.x = 0;
+    pt.y -= 60;
+    [self.postScrollView setContentOffset:pt animated:YES];
     
     
 }
+
 
 #pragma mark - UIImagePicker Delegate
 
@@ -120,8 +128,8 @@
 
 #pragma mark - Private methods
 - (IBAction)postButtonPressed {
-    
     //Create a story with image, location, review and post it to Facebook
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

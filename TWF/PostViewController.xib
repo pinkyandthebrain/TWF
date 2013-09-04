@@ -8,7 +8,7 @@
             <connections>
                 <outlet property="descriptionTextView" destination="Djo-iQ-pFF" id="S90-S6-IBz"/>
                 <outlet property="imageForPost" destination="U2e-OD-jVh" id="W85-Hm-Qor"/>
-                <outlet property="postScrollView" destination="A1T-sc-5yu" id="k2s-H8-xVW"/>
+                <outlet property="postScrollView" destination="uuI-Ng-Ain" id="Sp7-xZ-Two"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -17,16 +17,16 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" id="A1T-sc-5yu">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="uuI-Ng-Ain">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="U2e-OD-jVh">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="261"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" id="Djo-iQ-pFF">
-                            <rect key="frame" x="0.0" y="317" width="320" height="204"/>
+                            <rect key="frame" x="0.0" y="305" width="320" height="204"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <accessibility key="accessibilityConfiguration" hint="Description"/>
@@ -34,7 +34,7 @@
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="3si-4G-lJh">
-                            <rect key="frame" x="80" y="281" width="161" height="29"/>
+                            <rect key="frame" x="80" y="269" width="161" height="29"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Yum!"/>
