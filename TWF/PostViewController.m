@@ -15,8 +15,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *yumButton;
 @property (nonatomic, strong) UIImage *imageToUse;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
+@property (weak, nonatomic) IBOutlet UIScrollView *postScrollView;
 
-- (IBAction)postButtonPressed:(id)sender;
+- (IBAction)postButtonPressed;
 - (IBAction)yumButtonPressed:(id)sender;
 - (IBAction)yuckButtonPressed:(id)sender;
 
@@ -48,6 +49,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Post" style:UIBarButtonItemStylePlain target:self action:@selector(postButtonPressed)];
+    
     self.descriptionTextView.layer.borderWidth = 0.5F;
     self.descriptionTextView.layer.borderColor = [[UIColor grayColor] CGColor];
     //self.imageForPost.layer.borderWidth = 0.5F;
@@ -79,6 +83,16 @@
 }
 
 #pragma mark - UITextView Delegate
+
+- (void) textViewDidBeginEditing:(UITextView *)textView
+{
+    //Scroll to show the text box in view
+    
+  
+    
+    
+}
+
 #pragma mark - UIImagePicker Delegate
 
 
@@ -105,7 +119,7 @@
 
 
 #pragma mark - Private methods
-- (IBAction)postButtonPressed:(id)sender {
+- (IBAction)postButtonPressed {
     
     //Create a story with image, location, review and post it to Facebook
     [self dismissViewControllerAnimated:YES completion:nil];
