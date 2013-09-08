@@ -42,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14F0E30F17DD0084003E9771 /* TWFProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWFProtocols.h; sourceTree = "<group>"; };
 		588DED296DED4819B5F38B80 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C70166C6144AB1A5A56280 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		F044B1FE17D522C6009AC533 /* TWFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWFViewController.h; sourceTree = "<group>"; };
@@ -159,6 +160,7 @@
 				F0AFA91017D55B010042DD8D /* PostViewController.h */,
 				F0AFA91117D55B010042DD8D /* PostViewController.m */,
 				F0AFA91217D55B010042DD8D /* PostViewController.xib */,
+				14F0E30F17DD0084003E9771 /* TWFProtocols.h */,
 			);
 			path = TWF;
 			sourceTree = "<group>";

@@ -13,6 +13,7 @@
 #import "TWFViewController.h"
 #import "TWFImagePickerController.h"
 #import "PostViewController.h"
+#import "TWFProtocols.h"
 
 
 @interface TWFViewController ()

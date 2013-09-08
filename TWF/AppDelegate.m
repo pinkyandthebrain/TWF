@@ -72,7 +72,10 @@
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    return [FBSession.activeSession handleOpenURL:url];
+    //return [FBSession.activeSession handleOpenURL:url];
+    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication withSession:FBSession.activeSession fallbackHandler:^(FBAppCall *call) {
+        NSLog(@"IN CALLBACK");
+    }];
 }
 
 #pragma mark - Private methods
@@ -132,7 +135,10 @@
 
 - (void)openSession
 {
-    [FBSession openActiveSessionWithReadPermissions:nil
+    NSArray *permissions = [NSArray arrayWithObjects:@"user_photos",
+                            nil];
+    
+    [FBSession openActiveSessionWithReadPermissions:permissions
                                        allowLoginUI:YES
                                   completionHandler:
      ^(FBSession *session,
