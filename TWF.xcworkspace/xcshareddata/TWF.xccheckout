@@ -8,6 +8,8 @@
 	<string>TWF</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>7BCF97C2-B842-45DA-A140-5A3D6E7DCBF3</key>
+		<string>https://github.com/ntheone/twitter.git</string>
 		<key>BD1F11C9-15CF-4E74-97E1-EAD296C303D1</key>
 		<string>https://github.com/pinkyandthebrain/TWF.git</string>
 	</dict>
@@ -15,6 +17,8 @@
 	<string>TWF.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>7BCF97C2-B842-45DA-A140-5A3D6E7DCBF3</key>
+		<string>../../ios_twitter</string>
 		<key>BD1F11C9-15CF-4E74-97E1-EAD296C303D1</key>
 		<string>..</string>
 	</dict>
@@ -33,6 +37,14 @@
 			<string>BD1F11C9-15CF-4E74-97E1-EAD296C303D1</string>
 			<key>IDESourceControlWCCName</key>
 			<string>TWF</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7BCF97C2-B842-45DA-A140-5A3D6E7DCBF3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ios_twitter</string>
 		</dict>
 	</array>
 </dict>

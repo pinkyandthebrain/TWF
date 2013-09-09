@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *postScrollView;
 
 - (IBAction)postButtonPressed;
+- (IBAction)getLoaction;
 - (IBAction)yumButtonPressed:(id)sender;
 - (IBAction)yuckButtonPressed:(id)sender;
 
@@ -32,7 +33,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        [self.scrollView setScrollEnabled:YES];
+        [self.scrollView setClipsToBounds:YES];
     }
     return self;
 }
@@ -61,8 +63,7 @@
     //self.imageForPost.layer.borderWidth = 0.5F;
     //self.imageForPost.layer.borderColor = [[UIColor grayColor] CGColor];
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-    
-    
+
     if([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerSourceTypeCamera]){
         [imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
     }else{
@@ -72,6 +73,25 @@
     imagePicker.delegate = self;
     
     [self presentViewController:imagePicker animated:YES completion:nil];
+    
+    //Setup loacation
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+    // We don't want to be notified of small changes in location,
+    // preferring to use our last cached results, if any.
+    self.locationManager.distanceFilter = 50;
+    [self.locationManager startUpdatingLocation];
+    
+    //Location btn
+    [self.locationBtn setBackgroundImage:[UIImage imageNamed:@"Reply.png"] forState:UIControlStateNormal];
+    [self.locationBtn addTarget:self action:@selector(getLoaction) forControlEvents: UIControlEventTouchUpInside];
+}
+
+- (void)viewDidUnLoad {
+    self.placePickerController = nil;
+    self.locationManager = nil;
+    self.placePickerController.delegate = nil;
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -98,8 +118,6 @@
     pt.x = 0;
     pt.y -= 60;
     [self.postScrollView setContentOffset:pt animated:YES];
-    
-    
 }
 
 
@@ -196,9 +214,9 @@
     id<TWFEatFoodAction> action =
     (id<TWFEatFoodAction>)[FBGraphObject graphObject];
     action.food = mealObject;
-//    if (self.selectedPlace) {
-//        action.place = self.selectedPlace;
-//    }
+    if (self.selectedPlace) {
+        action.place = self.selectedPlace;
+    }
 //    if (self.selectedFriends.count > 0) {
 //        action.tags = self.selectedFriends;
 //    }
@@ -228,16 +246,46 @@
                           @"error: domain = %@, code = %d",
                           error.domain, error.code];
          }
+         //show alert
          [[[UIAlertView alloc] initWithTitle:@"Result"
                                      message:alertText
                                     delegate:nil
                            cancelButtonTitle:@"Thanks!"
                            otherButtonTitles:nil]
           show];
+         
      }
      ];
 }
 
+- (void)placePickerViewControllerSelectionDidChange:
+(FBPlacePickerViewController *)placePicker
+{
+    self.selectedPlace = placePicker.selection;
+    if (self.selectedPlace.count > 0) {
+        [self.navigationController popViewControllerAnimated:true];
+    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation
+{
+    if (!oldLocation ||
+        (oldLocation.coordinate.latitude != newLocation.coordinate.latitude &&
+         oldLocation.coordinate.longitude != newLocation.coordinate.longitude)) {
+            
+            // To-do, add code for triggering view controller update
+            NSLog(@"Got location: %f, %f",
+                  newLocation.coordinate.latitude,
+                  newLocation.coordinate.longitude);
+        }
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error {
+    NSLog(@"%@", error);
+}
 
 #pragma mark - Private methods
 - (IBAction)postButtonPressed {
@@ -263,6 +311,23 @@
     }
 }
 
+- (void)getLoaction {
+    if (!self.placePickerController) {
+        self.placePickerController = [[FBPlacePickerViewController alloc]
+                                      initWithNibName:nil bundle:nil];
+        self.placePickerController.title = @"Select a restaurant";
+        self.placePickerController.delegate = self;
+    }
+    self.placePickerController.locationCoordinate =
+    self.locationManager.location.coordinate;
+    self.placePickerController.radiusInMeters = 1000;
+    self.placePickerController.resultsLimit = 50;
+    self.placePickerController.searchText = @"restaurant";
+    
+    [self.placePickerController loadData];
+    [self.navigationController pushViewController:self.placePickerController
+                                         animated:true];
+}
 
 - (IBAction)yumButtonPressed:(id)sender {
 }

@@ -7,10 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <FacebookSDK/FacebookSDK.h>
 
-@interface PostViewController : UIViewController <UITextViewDelegate>
+@interface PostViewController : UIViewController <UITextViewDelegate, CLLocationManagerDelegate, FBPlacePickerDelegate>
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) NSObject<FBGraphPlace>* selectedPlace;
+@property (strong, nonatomic) FBPlacePickerViewController *placePickerController;
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageForPost;
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) IBOutlet UIButton *locationBtn;
 
 - (id)initWithImage:(UIImage *)imageToUse;
 
