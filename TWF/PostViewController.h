@@ -18,6 +18,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imageForPost;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) IBOutlet UIButton *locationBtn;
+@property (strong, nonatomic) IBOutlet UITextView *foodDescription;
 
 - (id)initWithImage:(UIImage *)imageToUse;
 

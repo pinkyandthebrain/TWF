@@ -84,7 +84,7 @@
     [self.locationManager startUpdatingLocation];
     
     //Location btn
-    [self.locationBtn setBackgroundImage:[UIImage imageNamed:@"Reply.png"] forState:UIControlStateNormal];
+    [self.locationBtn setBackgroundImage:[UIImage imageNamed:@"location.jpeg"] forState:UIControlStateNormal];
     [self.locationBtn addTarget:self action:@selector(getLoaction) forControlEvents: UIControlEventTouchUpInside];
 }
 
@@ -116,7 +116,19 @@
     rc = [self.descriptionTextView convertRect:rc toView:self.postScrollView];
     pt = rc.origin;
     pt.x = 0;
-    pt.y -= 60;
+    pt.y -= 270;
+    [self.postScrollView setContentOffset:pt animated:YES];
+}
+
+- (void) textViewDidEndEditing:(UITextView *)textView
+{
+    //Scroll to show the text box in view
+    CGPoint pt;
+    CGRect rc = [self.descriptionTextView bounds];
+    rc = [self.descriptionTextView convertRect:rc toView:self.postScrollView];
+    pt = rc.origin;
+    pt.x = 0;
+    pt.y -= 370;
     [self.postScrollView setContentOffset:pt animated:YES];
 }
 
@@ -133,12 +145,7 @@
     // Handle a still image picked from a photo album
     if (CFStringCompare ((CFStringRef) mediaType, kUTTypeImage, 0)
         == kCFCompareEqualTo) {
-        
         self.imageToUse = (UIImage *) [info objectForKey:UIImagePickerControllerOriginalImage];
-        
-        // Do something with imageToUse
-        NSLog(@"YAAAY");
-        
     }
     [picker dismissViewControllerAnimated:YES completion:nil];
     
@@ -207,7 +214,7 @@
 - (void)postOpenGraphActionWithPhotoURL:(NSString*)photoURL
 {
     // First create the Open Graph meal object for the meal we ate.
-    id<TWFFood> mealObject = [self mealObjectForMeal:@"Pizza"];
+    id<TWFFood> mealObject = [self mealObjectForMeal: self.foodDescription.text];
     
     // Now create an Open Graph eat action with the meal, our location,
     // and the people we were with.
@@ -238,9 +245,7 @@
      ^(FBRequestConnection *connection, id result, NSError *error) {
          NSString *alertText;
          if (!error) {
-             alertText = [NSString stringWithFormat:
-                          @"Posted Open Graph action, id: %@",
-                          [result objectForKey:@"id"]];
+             alertText = [NSString stringWithFormat: @"Posted your activity"];
          } else {
              alertText = [NSString stringWithFormat:
                           @"error: domain = %@, code = %d",
@@ -249,8 +254,8 @@
          //show alert
          [[[UIAlertView alloc] initWithTitle:@"Result"
                                      message:alertText
-                                    delegate:nil
-                           cancelButtonTitle:@"Thanks!"
+                                    delegate:self
+                           cancelButtonTitle:@"Ok"
                            otherButtonTitles:nil]
           show];
          
@@ -287,9 +292,13 @@
     NSLog(@"%@", error);
 }
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    [alertView.delegate dismissViewControllerAnimated:YES completion:^{}];
+}
+
 #pragma mark - Private methods
 - (IBAction)postButtonPressed {
-    
+    [self.foodDescription resignFirstResponder];
     if ([FBSession.activeSession.permissions
          indexOfObject:@"publish_actions"] == NSNotFound) {
         

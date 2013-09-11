@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0DA5699F91714BC7817D4AC2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 588DED296DED4819B5F38B80 /* libPods.a */; };
+		1403CCA417DFCB10007B2176 /* Favim.com-29791.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1403CCA317DFCB10007B2176 /* Favim.com-29791.jpg */; };
+		1403CCAA17DFE51A007B2176 /* photo.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 1403CCA917DFE51A007B2176 /* photo.JPG */; };
+		1403CCAC17DFE5C7007B2176 /* location.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1403CCAB17DFE5C7007B2176 /* location.jpeg */; };
 		14F4CAFF17DD522400B82D01 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F4CAFE17DD522400B82D01 /* CoreLocation.framework */; };
 		14F4CB0117DD5D9500B82D01 /* Reply.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F4CB0017DD5D9500B82D01 /* Reply.png */; };
 		F044B20117D522C6009AC533 /* TWFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F044B1FF17D522C6009AC533 /* TWFViewController.m */; };
@@ -44,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1403CCA317DFCB10007B2176 /* Favim.com-29791.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Favim.com-29791.jpg"; path = "../../../Downloads/Favim.com-29791.jpg"; sourceTree = "<group>"; };
+		1403CCA917DFE51A007B2176 /* photo.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo.JPG; path = ../../../Downloads/photo.JPG; sourceTree = "<group>"; };
+		1403CCAB17DFE5C7007B2176 /* location.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = location.jpeg; path = ../../../Downloads/location.jpeg; sourceTree = "<group>"; };
 		14F0E30F17DD0084003E9771 /* TWFProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWFProtocols.h; sourceTree = "<group>"; };
 		14F4CAFE17DD522400B82D01 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		14F4CB0017DD5D9500B82D01 /* Reply.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Reply.png; path = ../../ios_twitter/twitter/Reply.png; sourceTree = "<group>"; };
@@ -109,7 +115,11 @@
 		F044B20D17D52B0B009AC533 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				1403CCA917DFE51A007B2176 /* photo.JPG */,
+				1403CCA317DFCB10007B2176 /* Favim.com-29791.jpg */,
 				F0AFA90C17D533E10042DD8D /* camera.png */,
+				1403CCAB17DFE5C7007B2176 /* location.jpeg */,
+				14F4CB0017DD5D9500B82D01 /* Reply.png */,
 				F0AFA90D17D533E10042DD8D /* food.png */,
 			);
 			name = Images;
@@ -174,7 +184,6 @@
 		F0B8647E17D3B63D004F0DE1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				14F4CB0017DD5D9500B82D01 /* Reply.png */,
 				F0B8647F17D3B63D004F0DE1 /* TWF-Info.plist */,
 				F0B8648017D3B63D004F0DE1 /* InfoPlist.strings */,
 				F0B8648317D3B63D004F0DE1 /* main.m */,
@@ -278,13 +287,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1403CCAA17DFE51A007B2176 /* photo.JPG in Resources */,
 				14F4CB0117DD5D9500B82D01 /* Reply.png in Resources */,
 				F0AFA91417D55B010042DD8D /* PostViewController.xib in Resources */,
 				F044B20217D522C6009AC533 /* TWFViewController.xib in Resources */,
+				1403CCAC17DFE5C7007B2176 /* location.jpeg in Resources */,
 				F0AFA90E17D533E10042DD8D /* camera.png in Resources */,
 				F0AFA90F17D533E10042DD8D /* food.png in Resources */,
 				F0B8648217D3B63D004F0DE1 /* InfoPlist.strings in Resources */,
 				F0B864AA17D3CC0E004F0DE1 /* TWFLoginViewController.xib in Resources */,
+				1403CCA417DFCB10007B2176 /* Favim.com-29791.jpg in Resources */,
 				F0B8648A17D3B63D004F0DE1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

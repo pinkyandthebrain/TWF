@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TWFViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIImageView *launchImage;
 
 @end

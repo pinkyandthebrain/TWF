@@ -14,6 +14,7 @@
 #import "TWFImagePickerController.h"
 #import "PostViewController.h"
 #import "TWFProtocols.h"
+#import "AFNetworking.h"
 
 
 @interface TWFViewController ()
@@ -42,6 +43,12 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logoutButtonPressed:)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"camera.png"] landscapeImagePhone:[UIImage imageNamed:@"camera.png"] style:UIBarButtonItemStylePlain target:self action:@selector(composeButtonPressed)];
 
+    self.launchImage.image = [UIImage imageNamed:@"Favim.com-29791.jpg"];
+    [self fetchActions];
+}
+
+- (void)fetchActions {
+    
 }
 
 - (void)didReceiveMemoryWarning

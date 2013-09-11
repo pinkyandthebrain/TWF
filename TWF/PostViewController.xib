@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostViewController">
             <connections>
                 <outlet property="descriptionTextView" destination="Djo-iQ-pFF" id="S90-S6-IBz"/>
+                <outlet property="foodDescription" destination="Djo-iQ-pFF" id="vO3-kx-ytg"/>
                 <outlet property="imageForPost" destination="U2e-OD-jVh" id="W85-Hm-Qor"/>
                 <outlet property="locationBtn" destination="04X-T3-pvk" id="w2k-q9-lff"/>
                 <outlet property="postScrollView" destination="uuI-Ng-Ain" id="Sp7-xZ-Two"/>
@@ -27,8 +28,8 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="261"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" id="Djo-iQ-pFF">
-                            <rect key="frame" x="0.0" y="305" width="320" height="204"/>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Djo-iQ-pFF">
+                            <rect key="frame" x="9" y="305" width="301" height="73"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <accessibility key="accessibilityConfiguration" hint="Description"/>
